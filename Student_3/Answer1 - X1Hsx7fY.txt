@@ -1,0 +1,24 @@
+x = input()
+
+digitList = []
+counter_Digit = 0
+counter_aplphabet = 0
+
+for data in x:
+    if data.isdigit():
+        digitList.append(data)
+        counter_Digit += 1
+    else:
+        counter_aplphabet += 1
+
+if counter_aplphabet > 0 and counter_Digit > 0:
+    digitList.sort()
+    print(digitList)
+    sum = 0
+    for num in digitList:
+        sum += int(num)
+    print(sum)
+elif counter_aplphabet == 0:
+    print("There is no alphabet in the string")
+elif counter_Digit == 0:
+    print("There is no digit in the string")

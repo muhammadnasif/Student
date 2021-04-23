@@ -1,0 +1,11 @@
+dictionary_1 = {'A': 1, 'B': 2}
+dictionary_2 = {'C': 3, 'D': 4}
+new_dictionary = {}
+
+for key, value in dictionary_1.items():
+    new_dictionary[key] = value
+
+for key, value in dictionary_2.items():
+    new_dictionary[key] = value
+
+print(new_dictionary)

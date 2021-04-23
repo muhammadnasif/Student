@@ -1,0 +1,9 @@
+tpl = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h')
+
+newList = list(tpl)
+
+newList.reverse()
+
+tpl = tuple(newList)
+
+print(tpl)

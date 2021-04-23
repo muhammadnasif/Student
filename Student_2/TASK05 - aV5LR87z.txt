@@ -1,0 +1,18 @@
+def calculate_tax(age, salary, job):
+    age = int(age)
+    salary = int(salary)
+    if age<18:
+        return 0
+    elif job == "PRESIDENT":
+        return 0
+    elif salary<10000:
+        return 0
+    elif salary>=10000 and salary<=20000:
+        return salary*0.05
+    elif salary>20000:
+        return salary*0.1
+
+age = input()
+sal = input()
+job = input()
+print(calculate_tax(age,sal,job))

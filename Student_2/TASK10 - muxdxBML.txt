@@ -1,0 +1,11 @@
+def make_square(tpl):
+    dictionary = {}
+    range_0 = range(tpl[0], tpl[1] + 1)
+    for i in range_0:
+        dictionary[i] = i * i
+    return dictionary
+
+
+start = int(input())
+end = int(input())
+print(make_square((start, end)))

@@ -1,0 +1,22 @@
+def letter_Count(y):
+    upperCase = 0
+    lowerCase = 0
+    y = y.replace(" ","")
+    for data in y:
+        if data.isupper():
+            upperCase+=1
+        else:
+            lowerCase+=1
+
+    result = []
+    result.append(upperCase)
+    result.append(lowerCase)
+
+    return result
+
+
+x = input()
+result = letter_Count(x)
+
+print("No. of Uppercase characters: "+str(result[0]))
+print("No. of Lowercase characters: "+str(result[1]))

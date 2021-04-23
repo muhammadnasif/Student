@@ -1,0 +1,31 @@
+from math import ceil
+
+
+def sentenceChange(sentence, position):
+    newString = ""
+    tempString = ""
+    length = len(sentence)
+    if length == 1:
+        return sentence
+    else:
+        loopTimes = int(ceil(length / position))
+        newString = sentence[0]
+        start = 1
+        end = position
+        removeIndex = 0
+        for i in range(0, loopTimes):
+            if removeIndex !=0 and removeIndex < length:
+                tempString += sentence[removeIndex]
+            newString += sentence[start:end]
+            start += position
+            end += position
+            removeIndex += position
+
+    newString += tempString
+
+    return newString
+
+
+sentence = input()
+position = int(input())
+print(sentenceChange(sentence, position))

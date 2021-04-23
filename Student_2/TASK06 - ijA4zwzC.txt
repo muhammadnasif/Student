@@ -1,0 +1,13 @@
+def convert_days(value):
+    year = int(value / 365)
+    value = value % 365
+    month = int(value / 30)
+    value = value % 30
+    days = value
+    return year, month, days
+
+
+days = input()
+days = int(days)
+result = convert_days(days)
+print(str(result[0]) + "Y " + str(result[1]) + "M " + str(result[2]) + "D")

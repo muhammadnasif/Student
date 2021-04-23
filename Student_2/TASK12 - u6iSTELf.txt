@@ -1,0 +1,22 @@
+def atMaxTwo(inputList):
+    dictionary = {}
+    for key in inputList:
+        if key in dictionary.keys():
+            dictionary[key] += 1
+        else:
+            dictionary[key] = 1
+    newList = []
+    counter = 0
+    for key, value in dictionary.items():
+        if value > 2:
+            counter += (value - 2)
+            dictionary[key] = value - 2
+
+        for i in range(0, dictionary[key]):
+            newList.append(key)
+
+    print("Removed: "+str(counter))
+    return newList
+
+
+lst = atMaxTwo([10, 10, 15, 15, 20])

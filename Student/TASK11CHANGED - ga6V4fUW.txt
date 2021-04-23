@@ -1,0 +1,13 @@
+input_str = input()
+input_str = input_str.lower()
+input_str = input_str.replace(" ", "")
+dictionary = {}
+
+
+for key in input_str:
+    if key in dictionary.keys():
+        dictionary[key] += 1
+    else:
+        dictionary[key] = 1
+
+print(dictionary)

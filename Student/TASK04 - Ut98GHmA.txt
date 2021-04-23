@@ -1,0 +1,8 @@
+book_info = (("Best Mystery & Thriller", "The Silent Patient", 68821),
+             ("Best Horror", "The Institute", 75717),
+             ("Best History & Biography", "The Five", 31783),
+             ("Best Fiction", "The Testaments", 98291))
+
+for data in book_info:
+    (movieType, movieName, votes) = data
+    print(movieName + " won the '" + movieType + "' category with " + str(votes) + " votes")

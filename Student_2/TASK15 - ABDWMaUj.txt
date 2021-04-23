@@ -1,0 +1,17 @@
+def groceryCalculation(shoppingList, location="dhanmondi"):
+    deliveryFee = 30
+    if location.lower() != "dhanmondi":
+        deliveryFee = 70
+    priceDictionary = {"Rice": 105, "Potato": 20, "Chicken": 250, "Beef": 510, "Oil": 85}
+    price = 0
+    for data in shoppingList:
+        price += priceDictionary[data]
+
+    price += deliveryFee
+
+    return price
+
+
+inputList = ["Rice", "Beef", "Rice"]
+print(groceryCalculation(inputList))
+print(groceryCalculation(inputList,"Mohakhali"))

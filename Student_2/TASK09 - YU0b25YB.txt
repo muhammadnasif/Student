@@ -1,0 +1,15 @@
+import math
+
+
+def area_circumference_generator(radius):
+    circumference = 2 * math.pi * radius
+    area = math.pi * radius * radius
+    result = (area, circumference)
+    return result
+
+
+value = input()
+value = float(value)
+res = area_circumference_generator(value)
+(res_area, res_circum) = res
+print("Area of the circle is " + str(res_area) + " and circumference is " + str(res_circum))

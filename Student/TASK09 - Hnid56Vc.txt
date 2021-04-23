@@ -1,0 +1,11 @@
+exam_marks = {'Cierra Vega': 175, 'Alden Cantrell': 200, 'Kierra Gentry': 165, 'Pierre Cox': 190}
+
+limit = input()
+limit = int(limit)
+dictionary = {}
+
+for key,value in exam_marks.items():
+    if value > limit:
+        dictionary[key]=value
+
+print(dictionary)

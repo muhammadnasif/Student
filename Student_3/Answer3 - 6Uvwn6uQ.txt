@@ -1,0 +1,23 @@
+#x = "18142202"
+x = input()
+
+
+semester = {
+    '1': 'Spring',
+    '2': 'Fall',
+    '3': 'Summer'
+}
+
+program = {
+    '01': 'CSE program',
+    '41': 'CS program',
+}
+
+year = x[:2]
+
+print("Enrolled Semester: " + semester[x[2]] + "-" + year)
+
+if x[3:5] not in program.keys():
+    print("Other program")
+else:
+    print(program[x[3:5]])

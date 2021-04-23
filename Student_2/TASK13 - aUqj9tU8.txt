@@ -1,0 +1,15 @@
+def arithmeticOperation(operator, num1, num2):
+    if operator == "+":
+        return num1+num2
+    elif operator == "-":
+        return num1-num2
+    elif operator == "*":
+        return num1*num2
+    elif operator == "/":
+        return num1/num2
+
+
+operator = input()
+num1 = int(input())
+num2 = int(input())
+print(arithmeticOperation(operator, num1, num2))

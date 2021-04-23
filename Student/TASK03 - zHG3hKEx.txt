@@ -1,0 +1,10 @@
+book_info = (("Best Mystery & Thriller", "The Silent Patient", 68, 821),
+             ("Best Horror", "The Institute", 75, 717),
+             ("Best History & Biography", "The Five", 31, 783),
+             ("Best Fiction", "The Testaments", 98, 291))
+
+size = len(book_info)
+print("The size of tuple is: "+str(size))
+
+for data in book_info:
+    print(data)

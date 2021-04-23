@@ -1,0 +1,20 @@
+def even_checker(x):
+    if x % 2 == 0:
+        return True
+    else:
+        return False
+
+
+sentence = input()
+sentence = sentence.split(" ")
+listResult = []
+sum = 0
+
+for word in sentence:
+    for ascii_alphabet in word:
+        sum += ord(ascii_alphabet)
+    if even_checker(sum):
+        listResult.append(word)
+    sum = 0
+
+print(listResult)
