@@ -1,29 +1,24 @@
-def sentenceChange(sentence, position):
-    length = len(sentence)
+def rem_duplicate(lst):
+    uniqueElements = set(lst)
 
-    if length == 1 or position == 0:
-        return sentence
+    sum = 0
+    newList = []
+    for data in uniqueElements:
+        value = lst.count(data)
+        if value > 2:
+            sum += (value - 2)
+            newList.append(data)
+            newList.append(data)
+        elif value == 2:
+            newList.append(data)
+            newList.append(data)
+        elif value == 1:
+            newList.append(data)
 
-    newString = ""
-    tempString = ""
-    total = 0
-    for index in range(0,length):
-        if index == 0:
-            newString = newString + sentence[0]
-            total += 1
-            continue
-        else:
-            if index % position == 0:
-                newString += sentence[index - position + 1: index]
-                total += position
-                tempString += sentence[index]
-    if total != length:
-        newString += sentence[total:length]
-
-    newString = newString + tempString
-    return newString
+    return sum, newList
 
 
-sentence = input()
-position = int(input())
-print(sentenceChange(sentence, position))
+lst = [10, 10, 15, 15, 20]
+removed, newList = rem_duplicate(lst)
+print("Removed " + str(removed))
+print(newList)
