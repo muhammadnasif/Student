@@ -15,9 +15,6 @@ def cal_bonus(*args):
         total = goal * ((bonus / 100) * salary) + defaultBonus
         print(name + " earned a bonus of " + str(total) + " Taka for " + str(goal) + " goals.")
 
-
-def func(*args):
-    print(len(args))
-
-
 cal_bonus("Neymar", 1200000, 35, 5, "Jamal", 700000, 19, 5)
+#           0           1    2   3    4      5       6   7
+#          4*i+0      4*i+1  4*i+2 4*i+3 4*i+0  4*i+1  4*i+2 4*i+3
